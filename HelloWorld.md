@@ -9,6 +9,3 @@ __*Bold and italics*__
 ## List
 * one string
 * two string
-
-
-1248
