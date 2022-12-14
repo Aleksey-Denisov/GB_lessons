@@ -1,0 +1,15 @@
+C:\Users\lexsy\Documents\ReposProj\projC#\less4\bin\Debug\net6.0\less4.exe
+C:\Users\lexsy\Documents\ReposProj\projC#\less4\bin\Debug\net6.0\less4.deps.json
+C:\Users\lexsy\Documents\ReposProj\projC#\less4\bin\Debug\net6.0\less4.runtimeconfig.json
+C:\Users\lexsy\Documents\ReposProj\projC#\less4\bin\Debug\net6.0\less4.dll
+C:\Users\lexsy\Documents\ReposProj\projC#\less4\bin\Debug\net6.0\less4.pdb
+C:\Users\lexsy\Documents\ReposProj\projC#\less4\obj\Debug\net6.0\less4.csproj.AssemblyReference.cache
+C:\Users\lexsy\Documents\ReposProj\projC#\less4\obj\Debug\net6.0\less4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lexsy\Documents\ReposProj\projC#\less4\obj\Debug\net6.0\less4.AssemblyInfoInputs.cache
+C:\Users\lexsy\Documents\ReposProj\projC#\less4\obj\Debug\net6.0\less4.AssemblyInfo.cs
+C:\Users\lexsy\Documents\ReposProj\projC#\less4\obj\Debug\net6.0\less4.csproj.CoreCompileInputs.cache
+C:\Users\lexsy\Documents\ReposProj\projC#\less4\obj\Debug\net6.0\less4.dll
+C:\Users\lexsy\Documents\ReposProj\projC#\less4\obj\Debug\net6.0\refint\less4.dll
+C:\Users\lexsy\Documents\ReposProj\projC#\less4\obj\Debug\net6.0\less4.pdb
+C:\Users\lexsy\Documents\ReposProj\projC#\less4\obj\Debug\net6.0\less4.genruntimeconfig.cache
+C:\Users\lexsy\Documents\ReposProj\projC#\less4\obj\Debug\net6.0\ref\less4.dll
