@@ -6,11 +6,17 @@ def main():
     print(f"Сегодня {current_datetime}, хотите посмотреть расписание?")
     ans = inputAns()
     if ans == "y":
+        ans = ""
         check_file = os.path.exists(f"diary_{current_datetime.month}.txt")
         if check_file == True:
             my_file = open(f"diary_{current_datetime.month}.txt", "w+")
         else:
             print("Такого файла не существует, сделаем новый?")
+            ans = inputAns()
+            if ans == "y":
+                my_file = open(f"diary_{current_datetime.month}.txt", "w+")
+                days = monthrange(current_datetime.year, current_datetime.month)
+                print(days)
     else:
         print("Могу я предложить что-то еще?")
     #my_file = open(f"diary_{current_datetime.month}.txt", "w+")
