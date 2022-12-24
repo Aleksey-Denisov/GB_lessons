@@ -1,5 +1,5 @@
-﻿//mnArray();
-//findInArr();
+﻿mnArray();
+findInArr();
 midlArr();
 int inputInt(string x){
     bool prov=false;
