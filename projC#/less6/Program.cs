@@ -1,6 +1,4 @@
-﻿inputNum();
-intersectionOfLine();
-//функция для ввода целых чисел
+﻿//функция для ввода целых чисел
 int inputInt(string x){
     bool prov=false;
     int val=0;
@@ -56,3 +54,5 @@ void intersectionOfLine(){
     double y = Math.Round(k1 * x + b1,3);
     Console.WriteLine($"intersection in point: ({x};{y})");
 }
+intersectionOfLine();
+inputNum();

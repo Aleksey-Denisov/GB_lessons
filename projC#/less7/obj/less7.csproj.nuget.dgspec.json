@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lexsy\\Documents\\ReposProj\\projC#\\less6\\less6.csproj": {}
+    "C:\\Users\\lexsy\\Documents\\ReposProj\\projC#\\less7\\less7.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lexsy\\Documents\\ReposProj\\projC#\\less6\\less6.csproj": {
+    "C:\\Users\\lexsy\\Documents\\ReposProj\\projC#\\less7\\less7.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lexsy\\Documents\\ReposProj\\projC#\\less6\\less6.csproj",
-        "projectName": "less6",
-        "projectPath": "C:\\Users\\lexsy\\Documents\\ReposProj\\projC#\\less6\\less6.csproj",
+        "projectUniqueName": "C:\\Users\\lexsy\\Documents\\ReposProj\\projC#\\less7\\less7.csproj",
+        "projectName": "less7",
+        "projectPath": "C:\\Users\\lexsy\\Documents\\ReposProj\\projC#\\less7\\less7.csproj",
         "packagesPath": "C:\\Users\\lexsy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lexsy\\Documents\\ReposProj\\projC#\\less6\\obj\\",
+        "outputPath": "C:\\Users\\lexsy\\Documents\\ReposProj\\projC#\\less7\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lexsy\\AppData\\Roaming\\NuGet\\NuGet.Config",
