@@ -1,0 +1,15 @@
+C:\Users\lexsy\Documents\ReposProj\projC#\less8\obj\Debug\net6.0\less8.csproj.AssemblyReference.cache
+C:\Users\lexsy\Documents\ReposProj\projC#\less8\obj\Debug\net6.0\less8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lexsy\Documents\ReposProj\projC#\less8\obj\Debug\net6.0\less8.AssemblyInfoInputs.cache
+C:\Users\lexsy\Documents\ReposProj\projC#\less8\obj\Debug\net6.0\less8.AssemblyInfo.cs
+C:\Users\lexsy\Documents\ReposProj\projC#\less8\obj\Debug\net6.0\less8.csproj.CoreCompileInputs.cache
+C:\Users\lexsy\Documents\ReposProj\projC#\less8\bin\Debug\net6.0\less8.exe
+C:\Users\lexsy\Documents\ReposProj\projC#\less8\bin\Debug\net6.0\less8.deps.json
+C:\Users\lexsy\Documents\ReposProj\projC#\less8\bin\Debug\net6.0\less8.runtimeconfig.json
+C:\Users\lexsy\Documents\ReposProj\projC#\less8\bin\Debug\net6.0\less8.dll
+C:\Users\lexsy\Documents\ReposProj\projC#\less8\bin\Debug\net6.0\less8.pdb
+C:\Users\lexsy\Documents\ReposProj\projC#\less8\obj\Debug\net6.0\less8.dll
+C:\Users\lexsy\Documents\ReposProj\projC#\less8\obj\Debug\net6.0\refint\less8.dll
+C:\Users\lexsy\Documents\ReposProj\projC#\less8\obj\Debug\net6.0\less8.pdb
+C:\Users\lexsy\Documents\ReposProj\projC#\less8\obj\Debug\net6.0\less8.genruntimeconfig.cache
+C:\Users\lexsy\Documents\ReposProj\projC#\less8\obj\Debug\net6.0\ref\less8.dll
