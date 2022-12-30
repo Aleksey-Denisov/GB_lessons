@@ -1,7 +1,7 @@
-﻿//sortStrArr();
-//findMinSumRow();
-//multyMatrix();
-//tArr();
+﻿sortStrArr();
+findMinSumRow();
+multyMatrix();
+tArr();
 spArr();
 int inputInt(string x){
     bool prov=false;
