@@ -1,17 +1,8 @@
-Buble sorted: An array of 5 elements has been created
-Buble sorted: The user enters the value 9 into array element 0
-Buble sorted: The user enters the value 5 into array element 1
-Buble sorted: The user enters the value 3 into array element 2
-Buble sorted: The user enters the value 8 into array element 3
-Buble sorted: The user enters the value 1 into array element 4
-Buble sorted: The elements of the array 9 are replaced by 5
-Buble sorted: The elements of the array 9 are replaced by 3
-Buble sorted: The elements of the array 9 are replaced by 8
-Buble sorted: The elements of the array 9 are replaced by 1
-Buble sorted: The elements of the array 5 are replaced by 3
-Buble sorted: The elements of the array 8 are replaced by 1
-Buble sorted: The elements of the array 5 are replaced by 1
+Simple calculator: User entered number 25.0 action + and number 2.0
+Simple calculator: Action result 27.0
+Buble sorted: An array of 3 elements has been created
+Buble sorted: The user enters the value 3 2 1 
+Buble sorted: The elements of the array 3 are replaced by 2
 Buble sorted: The elements of the array 3 are replaced by 1
-Buble sorted: Complete array 1 3 5 8 9  
-Simple calculator: User entered number 12.0 action / and number 5.0
-Simple calculator: Action result 2.4
+Buble sorted: The elements of the array 2 are replaced by 1
+Buble sorted: Complete array 1 2 3 
