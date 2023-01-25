@@ -1,8 +1,0 @@
-Simple calculator: User entered number 25.0 action + and number 2.0
-Simple calculator: Action result 27.0
-Buble sorted: An array of 3 elements has been created
-Buble sorted: The user enters the value 3 2 1 
-Buble sorted: The elements of the array 3 are replaced by 2
-Buble sorted: The elements of the array 3 are replaced by 1
-Buble sorted: The elements of the array 2 are replaced by 1
-Buble sorted: Complete array 1 2 3 

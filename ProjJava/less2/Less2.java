@@ -1,45 +1,105 @@
 package ProjJava.less2;
 import java.util.Scanner;
-import java.io.*;
 import java.util.logging.*;
 
 public class Less2 {
     public static void main(String[] args) {
+        LogFile logFile = new LogFile();
         //Реализуйте алгоритм сортировки пузырьком числового массива, результат после каждой итерации запишите в лог-файл.
+        ArrayBubble ab = new ArrayBubble();
+        ab.bubbleSorter(logFile);
+        ab.printer(logFile);
         //К калькулятору из предыдущего дз добавить логирование.
-        //Поясните пожалуйста, почему создается два файла логирования, пишется в оба при этом
-        //и в другом порядке не выполняется, что-то не понимаю
-        simpleCalculator();
-        bubleSort();
-        /*
-        Появляется ошибка как буд то не распознает имя класса
-        Exception in thread "main" java.lang.NoClassDefFoundError: ProjJava/less2/Calculator
-        at ProjJava.less2.Less2.simpleCalculator(Less2.java:19)
-        at ProjJava.less2.Less2.main(Less2.java:12)
-        Caused by: java.lang.ClassNotFoundException: ProjJava.less2.Calculator
-        at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-        at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-        at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
-        ... 2 more
-         */
-    }
-    private static void simpleCalculator(){
         Calculator calc = new Calculator();
-        calc.performAnAction();
+        calc.performAnAction(logFile);
     }
-    private static void bubleSort(){
-        ArrayBubble arrayForSort = new ArrayBubble();
-        arrayForSort.printer();
+    
+}
+
+class ArrayBubble {
+    private int[] arrayInt;
+    private int amountOfElements;
+    private String forLog = "";
+    private EnteringUserData userData = new EnteringUserData();
+
+    public ArrayBubble(){
+        amountOfElements = userData.consoleEnterInt("Enter the size of the array: ");
+        arrayInt = new int[amountOfElements];
+        
+        for(int idElementArray = 0; idElementArray < amountOfElements; idElementArray++){
+            arrayInt[idElementArray] = userData.consoleEnterInt("Enter a value into an array element "+ idElementArray +": ");
+            forLog += arrayInt[idElementArray] + " ";
+        }
+    }
+
+    public void printer(LogFile logFile){
+        forLog = "";
+        for (int idElementArray = 0; idElementArray < amountOfElements; idElementArray++){
+            forLog += arrayInt[idElementArray] + " ";
+        }
+        logFile.info("Buble sorted: Complete array " + forLog + "\n");
+    }
+
+    private void toSwap(int first, int second){
+        int dummy = arrayInt[first];
+        arrayInt[first] = arrayInt[second];
+        arrayInt[second] = dummy;
+    }
+
+    public void bubbleSorter(LogFile logFile){
+        logFile.info("Buble sorted: An array of " + amountOfElements + " elements has been created\n");
+        logFile.info("Buble sorted: The user enters " + forLog + "\n");
+        for (int out = amountOfElements - 1; out >= 1; out--){
+            for (int in = 0; in < out; in++){
+                if(arrayInt[in] > arrayInt[in + 1]){
+                    logFile.info("Buble sorted: The elements of the array " + arrayInt[in] + " are replaced by " + arrayInt[in + 1] + "\n");
+                    toSwap(in, in + 1);
+                }
+            }
+        }
     }
 }
 
-class LogFile{
+class Calculator{
+    private double numberA, nubmerB;
+    private char choiceUser;
+    private EnteringUserData userData = new EnteringUserData();
+
+    public Calculator(){
+        numberA = userData.consoleEnterDouble("Enter number a: ");
+        choiceUser = userData.consoleEnterAction("Enter action is + or - or / or * : ");
+        nubmerB = userData.consoleEnterDouble("Enter number b: ");
+    }
+    public void performAnAction(LogFile logFile){
+        logFile.info("Simple calculator: User entered number " + numberA + " action " + choiceUser + " and number " + nubmerB + "\n");
+        switch(choiceUser){
+            case '+':
+                System.out.println(numberA + nubmerB);
+                logFile.info("Simple calculator: Action result " + (numberA + nubmerB)+ "\n");
+                break;
+            case '-':
+                System.out.println(numberA - nubmerB);
+                logFile.info("Simple calculator: Action result " + (numberA - nubmerB)+ "\n");
+                break;
+            case '*':
+                System.out.println(numberA * nubmerB);
+                logFile.info("Simple calculator: Action result " + (numberA * nubmerB)+ "\n");
+                break;
+            case '/':
+                System.out.println(numberA / nubmerB);
+                logFile.info("Simple calculator: Action result " + (numberA / nubmerB)+ "\n");
+                break;
+        }
+    }
+}
+
+class LogFile {
     private Logger logger = Logger.getLogger(LogFile.class.getName());
     private FileHandler fileHandler = null;
 
     public LogFile() {
         try {
-            fileHandler = new FileHandler("ProjJava/less2/event.log", true);
+            fileHandler = new FileHandler("ProjJava/less2/log.log", true);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -51,32 +111,6 @@ class LogFile{
     }
 }
 
-class FileOptions{
-    //Предположим, что я всегда хочу писать в этот файл если его не окажется создам новый
-    public FileOptions(){
-        File logActions = new File("ProjJava/less2/log.txt");
-        if(!logActions.exists()){
-            try{
-                boolean created = logActions.createNewFile();
-                if(created){
-                    System.out.println("File has been created");
-                }  
-            }catch(IOException ex){
-                System.out.println(ex.getMessage());
-            }
-        }
-    }
-    //Думал сделать больше методов для работы с файлами, пока не требуется
-    public void writeNewLineFile(String actions){
-        try(FileWriter writeToFile = new FileWriter("ProjJava/less2/log.txt", true)){
-            writeToFile.write(actions);
-            writeToFile.flush();
-        }
-        catch(IOException ex){
-            System.out.println(ex.getMessage());
-        }
-    }
-}
 class EnteringUserData{
     //Ввод с клавиатуры только целочисленных чисел
     public int consoleEnterInt(String message){
@@ -130,103 +164,3 @@ class EnteringUserData{
         return actionUser;
     }
 }
-
-class Calculator{
-    private LogFile eventLog = new LogFile();
-    private FileOptions logFileWrite = new FileOptions();
-    private EnteringUserData userData = new EnteringUserData();
-    private double numberA, nubmerB;
-    private char choiceUser;
-
-
-    public Calculator(){
-        numberA = userData.consoleEnterDouble("Enter number a: ");
-        choiceUser = userData.consoleEnterAction("Enter action is + or - or / or * : ");
-        nubmerB = userData.consoleEnterDouble("Enter number b: ");
-
-        eventLog.info("Simple calculator: User entered number " + numberA + " action " + choiceUser + " and number " + nubmerB + "\n");
-        logFileWrite.writeNewLineFile("Simple calculator: User entered number " + numberA + " action " + choiceUser + " and number " + nubmerB + "\n");
-    }
-    public void performAnAction(){
-        switch(choiceUser){
-            case '+':
-                System.out.println(numberA + nubmerB);
-                eventLog.info("Simple calculator: Action result " + (numberA + nubmerB)+ "\n");
-                logFileWrite.writeNewLineFile("Simple calculator: Action result " + (numberA + nubmerB)+ "\n");
-                break;
-            case '-':
-                System.out.println(numberA - nubmerB);
-                eventLog.info("Simple calculator: Action result " + (numberA - nubmerB)+ "\n");
-                logFileWrite.writeNewLineFile("Simple calculator: Action result " + (numberA - nubmerB)+ "\n");
-                break;
-            case '*':
-                System.out.println(numberA * nubmerB);
-                eventLog.info("Simple calculator: Action result " + (numberA * nubmerB)+ "\n");
-                logFileWrite.writeNewLineFile("Simple calculator: Action result " + (numberA * nubmerB)+ "\n");
-                break;
-            case '/':
-                System.out.println(numberA / nubmerB);
-                eventLog.info("Simple calculator: Action result " + (numberA / nubmerB)+ "\n");
-                logFileWrite.writeNewLineFile("Simple calculator: Action result " + (numberA / nubmerB)+ "\n");
-                break;
-        }
-    }
-}
-
-class ArrayBubble{
-    private LogFile eventLog = new LogFile();
-    private FileOptions logFileWrite = new FileOptions();
-    private EnteringUserData userData = new EnteringUserData();
-    private int[] arrayInt;
-    private int amountOfElements;
-    private String forLog = "";
-
-    public ArrayBubble(){
-        amountOfElements = userData.consoleEnterInt("Enter the size of the array: ");
-        arrayInt = new int[amountOfElements];
-
-        logFileWrite.writeNewLineFile("Buble sorted: An array of " + amountOfElements + " elements has been created\n");
-        eventLog.info("Buble sorted: An array of " + amountOfElements + " elements has been created\n");
-        
-        for(int idElementArray = 0; idElementArray < amountOfElements; idElementArray++){
-            arrayInt[idElementArray] = userData.consoleEnterInt("Enter a value into an array element "+ idElementArray +": ");
-            forLog += arrayInt[idElementArray] + " ";
-        }
-
-        logFileWrite.writeNewLineFile("Buble sorted: The user enters the value " + forLog + "\n");
-        eventLog.info("Buble sorted: The user enters " + forLog + "\n");
-
-        bubbleSorter();
-    }
-
-    public void printer(){
-        forLog = "";
-        for (int idElementArray = 0; idElementArray < amountOfElements; idElementArray++){
-            System.out.print(arrayInt[idElementArray] + " ");
-            forLog += arrayInt[idElementArray] + " ";
-        }
-        
-        System.out.println();
-        logFileWrite.writeNewLineFile("Buble sorted: Complete array " + forLog + "\n");
-        eventLog.info("Buble sorted: Complete array " + forLog + "\n");
-    }
-
-    private void toSwap(int first, int second){
-        int dummy = arrayInt[first];
-        arrayInt[first] = arrayInt[second];
-        arrayInt[second] = dummy;
-    }
-
-    private void bubbleSorter(){
-        for (int out = amountOfElements - 1; out >= 1; out--){
-            for (int in = 0; in < out; in++){
-                if(arrayInt[in] > arrayInt[in + 1]){
-                    logFileWrite.writeNewLineFile("Buble sorted: The elements of the array " + arrayInt[in] + " are replaced by " + arrayInt[in + 1] + "\n");
-                    eventLog.info("Buble sorted: The elements of the array " + arrayInt[in] + " are replaced by " + arrayInt[in + 1] + "\n");
-                    toSwap(in, in + 1);
-                }
-            }
-        }
-    }
-}
-
