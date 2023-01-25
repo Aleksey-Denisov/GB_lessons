@@ -13,9 +13,11 @@ public class less1 {
         //Требуется восстановить выражение до верного равенства. Предложить хотя бы одно решение или сообщить, что его нет.
         SolEquation();
     }
+    private static EnteringUserData userData = new EnteringUserData();
+    
     private static void SumAndMulty(){
         System.out.println("Task 1");
-        int number =  ConsoleEnterInt("Enter number:");
+        int number =  userData.consoleEnterInt("Enter number:");
         SumNumbers(number);
         FactotialNumbers(number);
     }
@@ -43,73 +45,22 @@ public class less1 {
     }
     private static void SimpleCalculator(){
         System.out.println("Task 3");
-        double a = ConsoleEnterDouble("Enter number a:");
-        char d = ConsoleEnterAction("Enter action is + or - or / or *");
-        double b = ConsoleEnterDouble("Enter number b:");
+        double a = userData.consoleEnterDouble("Enter number a:");
+        char d = userData.consoleEnterAction("Enter action is + or - or / or *");
+        double b = userData.consoleEnterDouble("Enter number b:");
         PerfAction(a,b,d);
 
     }
     private static void SolEquation(){
         System.out.println("Task 4");
         System.out.println("Type expression q? + ?w = e");
-        int q =  ConsoleEnterInt("Enter number q:");
-        int w =  ConsoleEnterInt("Enter number w:");
-        int e =  ConsoleEnterInt("Enter number e:");
+        int q =  userData.consoleEnterInt("Enter number q:");
+        int w =  userData.consoleEnterInt("Enter number w:");
+        int e =  userData.consoleEnterInt("Enter number e:");
         if(q > 0 && w > 0 && e > 0)
             MagicSol(q,w,e);
         else
             System.out.println("Error enter");
-    }
-    //Ввод с клавиатуры только целочисленных чисел
-    private static int ConsoleEnterInt(String X){
-        int a;
-        Scanner in = new Scanner(System.in);
-        while(true){
-           try{
-                System.out.println(X);
-                a = in.nextInt();
-                break;
-            }
-            catch(Exception ex){
-                System.out.println("Error");
-            }
-        }
-        return a;
-    }
-    //Ввод с клавиатуры чисел с плавающей точкой
-    private static double ConsoleEnterDouble(String X){
-        double d = 0;
-        Scanner in = new Scanner(System.in);
-        while(true){
-            try{
-                System.out.println(X);
-                d = Double.parseDouble(in.nextLine());
-                break;
-            }
-            catch(Exception ex){
-                System.out.println("Error");
-            }
-        }
-        return d;
-    }
-    //Ввод с клавиатуры действия для калькулятора
-    private static char ConsoleEnterAction(String X){
-        char a;
-        Scanner in = new Scanner(System.in);
-        while(true){
-            try{
-                System.out.println(X);
-                a = in.next().charAt(0);
-                if(a == '+' || a == '-' || a == '/' || a == '*')
-                    break;
-                else
-                    System.out.println("Error");
-            }
-            catch(Exception ex){
-                System.out.println("Error");
-            }
-        }
-        return a;
     }
     private static void MagicSol(int a, int b, int c){
         //Учитываем что первое число всегда двузначное, решение в целом всегда может быть я думаю, но скажем если число получается отрицательное, то решения нет
@@ -154,4 +105,56 @@ public class less1 {
         System.out.println( x + "! is "+ multiply);
     }
 
+}
+
+class EnteringUserData{
+    private Scanner in = new Scanner(System.in);
+    //Ввод с клавиатуры только целочисленных чисел
+    public int consoleEnterInt(String message){
+        int valueInt;
+        while(true){
+            System.out.print(message);
+            if(in.hasNextInt()){
+                valueInt = in.nextInt();
+                break;
+            }else{
+                System.out.println("Error");
+                in.nextLine();
+            }
+        }
+        return valueInt;
+    }
+    //Ввод с клавиатуры чисел с плавающей точкой
+    public double consoleEnterDouble(String message){
+        double doubleValue;
+        while(true){
+            System.out.print(message);
+            if(in.hasNextDouble()){
+                doubleValue = in.nextDouble();
+                break;
+            }else{
+                System.out.println("Error");
+                in.nextLine();
+            }
+        }
+        return doubleValue;
+    }
+    //Ввод с клавиатуры действия для калькулятора
+    public char consoleEnterAction(String message){
+        char actionUser;
+        while(true){
+            System.out.print(message);
+            actionUser = in.next().charAt(0);
+            if(actionUser == '+' || actionUser == '-' || actionUser == '/' || actionUser == '*')
+                break;
+            else
+                System.out.println("Error");
+                in.nextLine();
+        }
+        return actionUser;
+    }
+
+    public void scannerClose(){
+        in.close();
+    }
 }

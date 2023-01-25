@@ -1,78 +1,42 @@
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: An array of 8 elements has been created
+янв. 26, 2023 2:38:26 AM ProjJava.less2.LogFile info
+INFO: Buble sorted: An array of 5 elements has been created
 
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The user enters 564 234 156 845 358 12 84 68 
+янв. 26, 2023 2:38:36 AM ProjJava.less2.LogFile info
+INFO: Buble sorted: The user enters 84 23 48 12 58 
 
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 564 are replaced by 234
+янв. 26, 2023 2:38:36 AM ProjJava.less2.LogFile info
+INFO: Buble sorted: The elements of the array 84 are replaced by 23
 
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 564 are replaced by 156
+янв. 26, 2023 2:38:36 AM ProjJava.less2.LogFile info
+INFO: Buble sorted: The elements of the array 84 are replaced by 48
 
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 845 are replaced by 358
+янв. 26, 2023 2:38:36 AM ProjJava.less2.LogFile info
+INFO: Buble sorted: The elements of the array 84 are replaced by 12
 
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 845 are replaced by 12
+янв. 26, 2023 2:38:36 AM ProjJava.less2.LogFile info
+INFO: Buble sorted: The elements of the array 84 are replaced by 58
 
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 845 are replaced by 84
+янв. 26, 2023 2:38:36 AM ProjJava.less2.LogFile info
+INFO: Buble sorted: The elements of the array 48 are replaced by 12
 
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 845 are replaced by 68
+янв. 26, 2023 2:38:36 AM ProjJava.less2.LogFile info
+INFO: Buble sorted: The elements of the array 23 are replaced by 12
 
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 234 are replaced by 156
+янв. 26, 2023 2:38:36 AM ProjJava.less2.LogFile info
+INFO: Buble sorted: Complete array 12 23 48 58 84 
 
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 564 are replaced by 358
+янв. 26, 2023 2:38:40 AM ProjJava.less2.LogFile warning
+WARNING: Enter number a: Error enter user data
 
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 564 are replaced by 12
+янв. 26, 2023 2:39:12 AM ProjJava.less2.LogFile warning
+WARNING: Enter action is + or - or / or * : Error enter user data
 
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 564 are replaced by 84
+янв. 26, 2023 2:39:21 AM ProjJava.less2.LogFile warning
+WARNING: Enter action is + or - or / or * : Error enter user data
 
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 564 are replaced by 68
+янв. 26, 2023 2:39:25 AM ProjJava.less2.LogFile info
+INFO: Simple calculator: User entered number 5.0 action + and number 25.0
 
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 358 are replaced by 12
-
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 358 are replaced by 84
-
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 358 are replaced by 68
-
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 234 are replaced by 12
-
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 234 are replaced by 84
-
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 234 are replaced by 68
-
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 156 are replaced by 12
-
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 156 are replaced by 84
-
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 156 are replaced by 68
-
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: The elements of the array 84 are replaced by 68
-
-янв. 26, 2023 1:23:06 AM ProjJava.less2.LogFile info
-INFO: Buble sorted: Complete array 12 68 84 156 234 358 564 845 
-
-янв. 26, 2023 1:23:20 AM ProjJava.less2.LogFile info
-INFO: Simple calculator: User entered number 25.0 action / and number 3.0
-
-янв. 26, 2023 1:23:20 AM ProjJava.less2.LogFile info
-INFO: Simple calculator: Action result 8.333333333333334
+янв. 26, 2023 2:39:25 AM ProjJava.less2.LogFile info
+INFO: Simple calculator: Action result 30.0
 
