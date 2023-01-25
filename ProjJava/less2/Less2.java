@@ -6,12 +6,12 @@ public class Less2 {
     public static void main(String[] args) {
         LogFile logFile = new LogFile();
         //Реализуйте алгоритм сортировки пузырьком числового массива, результат после каждой итерации запишите в лог-файл.
-        ArrayBubble ab = new ArrayBubble();
-        ab.bubbleSorter(logFile);
-        ab.printer(logFile);
+        ArrayBubble arrayBuble = new ArrayBubble();
+        arrayBuble.bubbleSorter(logFile);
+        arrayBuble.printer(logFile);
         //К калькулятору из предыдущего дз добавить логирование.
-        Calculator calc = new Calculator();
-        calc.performAnAction(logFile);
+        Calculator calculator = new Calculator();
+        calculator.performAnAction(logFile);
     }
     
 }
