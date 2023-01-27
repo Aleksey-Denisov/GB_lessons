@@ -13,7 +13,6 @@ public class Less2 {
         Calculator calculator = new Calculator(logFile);
         calculator.performAnAction(logFile);
     }
-    
 }
 
 class ArrayBubble {
@@ -74,19 +73,15 @@ class Calculator{
         logFile.info("Simple calculator: User entered number " + numberA + " action " + choiceUser + " and number " + nubmerB + "\n");
         switch(choiceUser){
             case '+':
-                System.out.println(numberA + nubmerB);
                 logFile.info("Simple calculator: Action result " + (numberA + nubmerB)+ "\n");
                 break;
             case '-':
-                System.out.println(numberA - nubmerB);
                 logFile.info("Simple calculator: Action result " + (numberA - nubmerB)+ "\n");
                 break;
             case '*':
-                System.out.println(numberA * nubmerB);
                 logFile.info("Simple calculator: Action result " + (numberA * nubmerB)+ "\n");
                 break;
             case '/':
-                System.out.println(numberA / nubmerB);
                 logFile.info("Simple calculator: Action result " + (numberA / nubmerB)+ "\n");
                 break;
         }
@@ -125,7 +120,6 @@ class EnteringUserData{
                 valueInt = in.nextInt();
                 break;
             }else{
-                System.out.println("Error");
                 logFile.warning(message + "Error enter user data\n");
                 in.nextLine();
             }
@@ -141,7 +135,6 @@ class EnteringUserData{
                 doubleValue = in.nextDouble();
                 break;
             }else{
-                System.out.println("Error");
                 logFile.warning(message + "Error enter user data\n");
                 in.nextLine();
             }
@@ -154,12 +147,12 @@ class EnteringUserData{
         while(true){
             System.out.print(message);
             actionUser = in.next().charAt(0);
-            if(actionUser == '+' || actionUser == '-' || actionUser == '/' || actionUser == '*')
+            if(actionUser == '+' || actionUser == '-' || actionUser == '/' || actionUser == '*'){
                 break;
-            else
-                System.out.println("Error");
+            }else{
                 logFile.warning(message + "Error enter user data\n");
                 in.nextLine();
+            }
         }
         return actionUser;
     }
