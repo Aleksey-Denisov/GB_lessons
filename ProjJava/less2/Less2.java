@@ -68,9 +68,9 @@ class Calculator{
         numberA = userData.consoleEnterDouble("Enter number a: ", logFile);
         choiceUser = userData.consoleEnterAction("Enter action is + or - or / or * : ", logFile);
         nubmerB = userData.consoleEnterDouble("Enter number b: ", logFile);
+        logFile.info("Simple calculator: User entered number " + numberA + " action " + choiceUser + " and number " + nubmerB + "\n");
     }
     public void performAnAction(LogFile logFile){
-        logFile.info("Simple calculator: User entered number " + numberA + " action " + choiceUser + " and number " + nubmerB + "\n");
         switch(choiceUser){
             case '+':
                 logFile.info("Simple calculator: Action result " + (numberA + nubmerB)+ "\n");

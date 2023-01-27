@@ -79,3 +79,36 @@ INFO: Simple calculator: User entered number 5.5 action / and number 5.0
 янв. 28, 2023 12:25:01 AM ProjJava.less2.LogFile info
 INFO: Simple calculator: Action result 1.1
 
+янв. 28, 2023 12:26:45 AM ProjJava.less2.LogFile info
+INFO: Buble sorted: An array of 3 elements has been created
+
+янв. 28, 2023 12:26:47 AM ProjJava.less2.LogFile info
+INFO: Buble sorted: The user enters 3 2 1 
+
+янв. 28, 2023 12:26:47 AM ProjJava.less2.LogFile info
+INFO: Buble sorted: The elements of the array 3 are replaced by 2
+
+янв. 28, 2023 12:26:47 AM ProjJava.less2.LogFile info
+INFO: Buble sorted: The elements of the array 3 are replaced by 1
+
+янв. 28, 2023 12:26:47 AM ProjJava.less2.LogFile info
+INFO: Buble sorted: The elements of the array 2 are replaced by 1
+
+янв. 28, 2023 12:26:47 AM ProjJava.less2.LogFile info
+INFO: Buble sorted: Complete array 1 2 3 
+
+янв. 28, 2023 12:26:50 AM ProjJava.less2.LogFile warning
+WARNING: Enter number a: Error enter user data
+
+янв. 28, 2023 12:26:54 AM ProjJava.less2.LogFile warning
+WARNING: Enter action is + or - or / or * : Error enter user data
+
+янв. 28, 2023 12:26:57 AM ProjJava.less2.LogFile warning
+WARNING: Enter action is + or - or / or * : Error enter user data
+
+янв. 28, 2023 12:27:12 AM ProjJava.less2.LogFile info
+INFO: Simple calculator: User entered number 2.5 action + and number 2.8
+
+янв. 28, 2023 12:27:12 AM ProjJava.less2.LogFile info
+INFO: Simple calculator: Action result 5.3
+
