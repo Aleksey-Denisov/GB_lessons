@@ -13,8 +13,8 @@ public class Product {
     public Product(String name, double volume, double price){
         this(name, volume, "ml", price);
     }
-    public void showProduct(String message){
-        System.out.printf( "%s %.2f %s price: %.2f %s\n",name, volume, measureUnit, price, message);
+    public void showProduct(){
+        System.out.printf( "%s %.2f %s price: %.2f %s\n",name, volume, measureUnit, price);
     }
     public double getVolumeProduct(){
         return volume;
