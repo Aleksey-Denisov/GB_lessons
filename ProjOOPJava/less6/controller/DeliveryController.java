@@ -3,11 +3,20 @@ import ProjOOPJava.less6.model.*;
 import ProjOOPJava.less6.service.DelivetyEnum;
 
 public class DeliveryController {
-    public DeliveryAction delivery(DelivetyEnum type){
-        DeliveryAction action = DeliveryBuild.getTransport(type);
-        action.receivingAnOrder();
-        action.deliveryOrder();
-        System.out.println("Delivery Complite");
-        return action;
+    private DeliveryAction action;
+    public void delivery(DelivetyEnum type){
+        action = DeliveryBuild.getTransport(type);
+    }
+    public String getTransport(){
+        return action.getTransport();
+    }
+    public String receivingAnOrder(){
+        return action.receivingAnOrder();
+    }
+    public String deliveryOrder(){
+        return action.deliveryOrder();
+    }
+    public String deliveryComplite(){
+        return "Доставка выполнена";
     }
 }

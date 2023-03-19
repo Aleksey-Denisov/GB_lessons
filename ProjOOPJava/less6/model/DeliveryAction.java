@@ -1,32 +1,45 @@
 package ProjOOPJava.less6.model;
 
 public class DeliveryAction {
-    public void receivingAnOrder(){
-        System.out.println("Receiving An Order");
+    public String receivingAnOrder(){
+        return "Получил заказ";
     }
-    public void deliveryOrder(){
-        System.out.println("Delivery Order");
+    public String deliveryOrder(){
+        return "Заказ в доставке";
+    }
+    public String getTransport(){
+        return "";
     }
 }
     
 class Bike extends DeliveryAction{
     public Bike(){
-        System.out.println("Delivery on Bike");
+        getTransport();
+    }
+    public String getTransport(){
+        return "Доставка выполняется на велосипеде";
     }
 }
 class ElectricScooter extends DeliveryAction{
     public ElectricScooter(){
-        System.out.println("Delivery on Electric Scooter");
+        getTransport();
+    }
+    public String getTransport(){
+        return "Доставка выполняется на электро самокате";
     }
 }
 class Foots extends DeliveryAction{
     public Foots(){
-        System.out.println("Delivery on Foots");
+    }
+    public String getTransport(){
+        return "Доставка выполняется пешком";
     }
 } 
 class QuadCopter extends DeliveryAction{
     public QuadCopter(){
-        System.out.println("Delivery on Quad Copter");
+    }
+    public String getTransport(){
+        return "Доставка выполняется квадрокоптером";
     }
 } 
 
