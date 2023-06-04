@@ -12,6 +12,5 @@ public class Controller {
         module.divArrays(new int[]{3,56,3,436,5,765,23}, new int[]{2,4,6,8,3});
         //3
         module.divArrays2(null, null);
-
     }
 }
