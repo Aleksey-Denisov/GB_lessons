@@ -1,4 +1,5 @@
-﻿rec();
+﻿using System;
+rec();
 sumEl();
 akkerNum();
 int inputInt(string x){

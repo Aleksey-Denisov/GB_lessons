@@ -1,4 +1,5 @@
-﻿//функция для ввода целых чисел
+﻿using System;
+//функция для ввода целых чисел
 int inputInt(string x){
     bool prov=false;
     int val=0;

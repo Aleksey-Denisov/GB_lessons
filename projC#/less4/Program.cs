@@ -1,4 +1,6 @@
-﻿numPow();
+﻿using System;
+
+numPow();
 sumNum();
 inputArr();
 //функция для ввода целых чисел

@@ -1,4 +1,5 @@
-﻿mnArray();
+﻿using System;
+mnArray();
 findInArr();
 midlArr();
 int inputInt(string x){

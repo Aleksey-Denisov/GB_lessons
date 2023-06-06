@@ -47,12 +47,18 @@ public class Module {
         }
     }
     public  int[] divArrays2(int[] firstArray, int[] secondArray) {
-        if (firstArray == null || secondArray == null) throw new RuntimeException("Нет массивов!!!");
-        if(firstArray.length != secondArray.length) throw new RuntimeException("Длины массивов не равны!!!");
-        int[] resultArr = new int[firstArray.length];
-        for (int i = 0; i < resultArr.length; i++) {
-            resultArr[i] = firstArray[i]/secondArray[i];
+        try{
+            if (firstArray == null || secondArray == null) throw new RuntimeException("Нет массивов!!!");
+            if(firstArray.length != secondArray.length) throw new RuntimeException("Длины массивов не равны!!!");
+            int[] resultArr = new int[firstArray.length];
+            for (int i = 0; i < resultArr.length; i++) {
+                if(secondArray[i] == 0) throw new RuntimeException("На ноль делить нельзя!!!");
+                resultArr[i] = firstArray[i]/secondArray[i];
+            }
+            return resultArr;
+        }catch(RuntimeException ex){
+            System.out.println(ex.getMessage());
+            return null;
         }
-        return resultArr;    
     }
 }

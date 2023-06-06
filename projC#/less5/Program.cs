@@ -1,4 +1,5 @@
-﻿arrRand();
+﻿using System;
+arrRand();
 arrPos();
 arrDif();
 //функция для ввода целых чисел

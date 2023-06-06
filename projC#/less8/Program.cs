@@ -1,4 +1,5 @@
-﻿sortStrArr();
+﻿using System;
+sortStrArr();
 findMinSumRow();
 multyMatrix();
 tArr();

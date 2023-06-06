@@ -1,4 +1,5 @@
-﻿palindorm();
+﻿using System;
+palindorm();
 distancePoint();
 cubeN();
 //функция для ввода целых чисел
